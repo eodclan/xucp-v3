@@ -10,8 +10,6 @@
 // ************************************************************************************//
 // * License Typ: GNU GPLv3
 // ************************************************************************************//
-// Settings files from this xucp
-// ************************************************************************************//
 require_once(dirname(__FILE__) . "/config/config_mysql.php");
 require_once(dirname(__FILE__) . "/config/config_settings.php");
 require_once(dirname(__FILE__) . "/config/config_class.php");
@@ -68,13 +66,9 @@ if(isset($_POST['logout'])){
                                 <div class='card-body'>
 									".MSG_17."
                                 </div>
-                                <!-- end card body -->
                             </div>
-                            <!-- end card -->
                         </div>
-                        <!-- end col -->
-                    </div>
-                    <!-- end row -->";					
+                    </div>";					
   site_footer(); 
   exit();  
 }
@@ -161,15 +155,4 @@ function format_comment($text, $strip_html = true)
 
     return $s;
 }
-
-// ************************************************************************************//
-// MySQL Select System
-// ************************************************************************************//
-function xucp_db_select($query): bool|array|null
-{
-	$erg=mysqli_query($conn, $query);
-	$r=mysqli_fetch_assoc($erg);
-	return($r);
-}
-
 ?>

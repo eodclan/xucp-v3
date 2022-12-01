@@ -1,10 +1,10 @@
 <?php 
 // ************************************************************************************//
-// * xUCP Pro
+// * xUCP Free
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 2.3
+// * Version: 3.0 alpha
 // * 
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -40,7 +40,7 @@ echo "
 if(isset($_POST['message'])){
     $select_stmt = $db->prepare("SELECT * FROM accounts");
     $select_stmt->execute();
-    $dashboard=$select_stmt->fetch(PDO::FETCH_ASSOC);
+    $norep=$select_stmt->fetch(PDO::FETCH_ASSOC);
 
     if($select_stmt->rowCount() > 0){
         $subject = substr(htmlspecialchars(stripslashes($_POST["subject"])), 0, 80);
@@ -50,10 +50,12 @@ if(isset($_POST['message'])){
             $subject = "Fw: $subject";
             $message = htmlspecialchars(stripslashes($_POST["message"]));
         }
-        $to = $dashboard["email"];
+        $to = $norep["email"];
         $message = EMAIL_SYSTEM_NOTE2 ." ".$_SESSION['username']['site_settings_site_name']." ".EMAIL_SYSTEM_NOTE3." " . date("Y-m-d H:i:s") . ".\n" .EMAIL_SYSTEM_NOTE1."\n" .
             "---------------------------------------------------------------------\n\n" .
             $message .htmlspecialchars(stripslashes($_POST['message']))."\n\n" .
+            "---------------------------------------------------------------------\n\n" .
+            "Powered by xUCP Free V3\n\n" .
             "---------------------------------------------------------------------\n\n";
         $success = mail($to, $subject, $message, "From: ".SITE_EMAIL, "-f ".SITE_EMAIL);
     }

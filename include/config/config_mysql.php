@@ -10,8 +10,6 @@
 // ************************************************************************************//
 // * License Typ: GNU GPLv3
 // ************************************************************************************//
-// * Prevent direct PHP call
-// ************************************************************************************//
 ob_start();
 
 if ( $_SERVER['REQUEST_METHOD']=='GET' && realpath(__FILE__) == realpath( $_SERVER['SCRIPT_FILENAME'] ) ) {        
@@ -39,6 +37,7 @@ session_regenerate_id(true);
 // * MySQL Database Connection
 // ************************************************************************************//
 $db_host="localhost"; //localhost server
+$db_port="3306"; //localhost server port
 $db_user="";	//database username
 $db_password="";	//database password
 $db_name="";	//database name

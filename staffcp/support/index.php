@@ -134,30 +134,11 @@ echo"
 											}
 										echo"									  
 												</tbody>
-											</table>";
-										$result_db = mysqli_query($conn,"SELECT COUNT(id) FROM xucp_support"); 
-										$userchange_db = mysqli_fetch_row($result_db);  
-										$total_records = $userchange_db[0];  
-										$total_sites = ceil($total_records / $limit); 
-										$siteLink = "
-											<div class='btn-toolbar gap-2' role='toolbar' aria-label='Toolbar with button groups'>
-												<div class='btn-group' role='group' aria-label='First group'>";  
-												for ($i=1; $i<=$total_sites; $i++) {
-													$siteLink .= "
-														<button type='button' class='btn btn-secondary'>
-															<a href='".$_SERVER['PHP_SELF']."?site=".$i."' data-page='".$i."'>".$i."</a>
-														</button>";	
-												}
-												echo $siteLink . "
-												</div>
-											</div>			  
+											</table>
+										</div>		  
 									</div>
-									<!-- end card body -->
 								</div>
-								<!-- end card -->
 							</div>
-							<!-- end col -->
-						</div>
-						<!-- end row -->";
+						</div>";
 site_footer();
 ?>
