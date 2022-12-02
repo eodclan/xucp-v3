@@ -161,6 +161,7 @@ const SITECONFIG_CLIENT_NO = "Nein";
 const SITECONFIG_UPGRADE_NOTE = "Upgrade Hinweis";
 const SITECONFIG_UPGRADE_NOTE_INFO = "W&auml;hlen Sie die Upgrade Anzeige, den Sie verwenden m&ouml;chten.";
 const SITECONFIG_GSERVER_STATUS = "Game Server Status";
+const SITECONFIG_LANG = "UCP Sprache";
 
 // ************************************************************************************//
 // * German Language Section - Message System 
@@ -306,7 +307,8 @@ const SUBMIT = "Senden";
 const RULES = "Regeln";
 const NOTE = "<b>Hinweis:</b> Felder mit <span class='pflichtfeld'>*</span> m&uuml;ssen ausgef&uuml;llt werden.";
 const NOTE2 = "<b>Hinweis:</b> Der Username sowie der Social Club Name m&uuml;ssen gleich sein.";
-const NOTE3 = "<b>Hinweis:</b> Sie haben kein Konto?";
+const NOTE3 = "<b>Hinweis:</b> Sie haben kein Account?";
+const NOTE4 = "<b>Hinweis:</b> Sie haben ein Account ?";
 const INFO1 = "Benutzername eingeben";
 const INFO2 = "Passwort eingeben";
 const INDEXTEXT = "Wir Bringen Das Roleplay Auf Ein Neues Level, Mit Unserer Realistischen Handhabung, Sind Uns Keine Grenzen Gesetzt!";

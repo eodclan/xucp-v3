@@ -162,6 +162,7 @@ const SITECONFIG_CLIENT_NO = "No";
 const SITECONFIG_UPGRADE_NOTE = "Upgrade notice";
 const SITECONFIG_UPGRADE_NOTE_INFO = "Choose the upgrade display you want to use.";
 const SITECONFIG_GSERVER_STATUS = "Game Server Status";
+const SITECONFIG_LANG = "UCP Language";
 
 // ************************************************************************************//
 // * English Language Section - Message System 
