@@ -27,7 +27,7 @@ function site_navi_logged(): void
                     <div id='sidebar-menu'>
                         <!-- Left Menu Start -->
                         <ul class='metismenu list-unstyled' id='side-menu'>
-                            <li class='menu-title' data-key='t-menu'>".$_SESSION['username']['site_settings_site_name']."</li>
+                            <li class='menu-title' data-key='t-menu'>".$_SESSION['xucp_uname']['site_settings_site_name']."</li>
                             <li>
                                 <a href='/usercp/dashboard/index.php'>
                                     <i class='dripicons-home'></i>
@@ -35,7 +35,7 @@ function site_navi_logged(): void
                                 </a>
                             </li>
                             <li>
-                                <a href='ts3server://".$_SESSION['username']['site_settings_teamspeak']."'>
+                                <a href='ts3server://".$_SESSION['xucp_uname']['site_settings_teamspeak']."'>
                                     <i class='dripicons-headset'></i>
                                     <span data-key='t-dashboard'>Teamspeak</span>
                                 </a>
@@ -75,7 +75,7 @@ function site_navi_logged(): void
 									<li><a href='/usercp/uptime/index.php' data-key='t-read-email'>".UPTIME_SYSTEM_HEADER."</a></li>
 								</ul>
 							</li>";
-							if(intval($_SESSION['username']['secure_staff']) >= UC_CLASS_SUPPORTER) {
+							if(intval($_SESSION['xucp_uname']['secure_staff']) >= UC_CLASS_SUPPORTER) {
 							echo "
 							<li>
 								<a href='javascript: void(0);' class='has-arrow'>
@@ -91,7 +91,7 @@ function site_navi_logged(): void
 								</ul>
 							</li>";
 							}
-							if(intval($_SESSION['username']['secure_staff']) >= UC_CLASS_PROJECT_MANAGEMENT) {
+							if(intval($_SESSION['xucp_uname']['secure_staff']) >= UC_CLASS_PROJECT_MANAGEMENT) {
 							echo "
 							<li>
 								<a href='javascript: void(0);' class='has-arrow'>
@@ -110,7 +110,7 @@ function site_navi_logged(): void
 							}
 		echo "
 						</ul>";
-		if(intval($_SESSION['username']['site_settings_upgrade_note']) == 1) {
+		if(intval($_SESSION['xucp_uname']['site_settings_upgrade_note']) == 1) {
 			echo "
                         <div class='card sidebar-alert border-0 text-center mx-4 mb-0 mt-5'>
                             <div class='card-body'>
@@ -143,7 +143,7 @@ function site_navi_nologged(): void
                     <div id='sidebar-menu'>
                         <!-- Left Menu Start -->
                         <ul class='metismenu list-unstyled' id='side-menu'>
-                            <li class='menu-title' data-key='t-menu'>".$_SESSION['username']['site_settings_site_name']."</li>
+                            <li class='menu-title' data-key='t-menu'>".$_SESSION['xucp_uname']['site_settings_site_name']."</li>
                             <li>
                                 <a href='/usercp/login/index.php'>
                                     <i class='dripicons-lock-open'></i>
@@ -157,7 +157,7 @@ function site_navi_nologged(): void
                                 </a>
                             </li>							
                         </ul>";
-    if(intval($_SESSION['username']['site_settings_upgrade_note']) == 1) {
+    if(intval($_SESSION['xucp_uname']['site_settings_upgrade_note']) == 1) {
         echo "
                         <div class='card sidebar-alert border-0 text-center mx-4 mb-0 mt-5'>
                             <div class='card-body'>

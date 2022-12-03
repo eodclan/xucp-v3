@@ -1,16 +1,14 @@
-<?php 
+<?php
 // ************************************************************************************//
 // * xUCP Free
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 2.3
-// * 
+// * Version: 3.0 alpha
+// *
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
 // * License Typ: GNU GPLv3
-// ************************************************************************************//
-// * Prevent direct PHP call
 // ************************************************************************************//
 if ( $_SERVER['REQUEST_METHOD']=='GET' && realpath(__FILE__) == realpath( $_SERVER['SCRIPT_FILENAME'] ) ) {        
 	header( 'HTTP/1.0 403 Forbidden', TRUE, 403 );
@@ -23,11 +21,11 @@ if ( $_SERVER['REQUEST_METHOD']=='GET' && realpath(__FILE__) == realpath( $_SERV
  */
 function site_secure(): void
 {
-	if(!isset($_SESSION['username']['secure_first']) || $_SESSION['username']['secure_granted'] !== 'granted' || $_SESSION['username']['site_settings_site_online'] !== '1') {
+	if(!isset($_SESSION['xucp_uname']['secure_first']) || $_SESSION['xucp_uname']['secure_granted'] !== 'granted' || $_SESSION['xucp_uname']['site_settings_site_online'] !== '1') {
 		site_header_nologged(SECURE_SYSTEM);
 		site_navi_nologged();
 		site_content_nologged();
-	echo "
+		echo "
                         <div class='row'>
                             <div class='col-12'>
                                 <div class='page-title-box d-sm-flex align-items-center justify-content-between'>
@@ -35,7 +33,7 @@ function site_secure(): void
 
                                     <div class='page-title-right'>
                                         <ol class='breadcrumb m-0'>
-                                            <li class='breadcrumb-item'><a href='/usercp/login/index.php'>".$_SESSION['username']['site_settings_site_name']."</a></li>
+                                            <li class='breadcrumb-item'><a href='/usercp/login/index.php'>".$_SESSION['xucp_uname']['site_settings_site_name']."</a></li>
                                             <li class='breadcrumb-item active'>".SECURE_SYSTEM."</li>
                                         </ol>
                                     </div>
@@ -54,15 +52,11 @@ function site_secure(): void
                                 <div class='card-body'>
 									".MSG_1."
                                 </div>
-                                <!-- end card body -->
                             </div>
-                            <!-- end card -->
                         </div>
-                        <!-- end col -->
-                    </div>
-                    <!-- end row -->";		
-	site_footer();
-	die();
+                    </div>";
+		site_footer();
+		die();
 	}  
 }
 
@@ -71,7 +65,7 @@ function site_secure(): void
  */
 function site_secure_staff_check(): void
 {
-	if(intval($_SESSION['username']['secure_staff']) < "".UC_CLASS_SUPPORTER."") {
+	if(intval($_SESSION['xucp_uname']['secure_staff']) < UC_CLASS_SUPPORTER) {
 		site_header_nologged(SECURE_SYSTEM);
 		site_navi_nologged();
 		site_content_nologged();
@@ -83,7 +77,7 @@ function site_secure_staff_check(): void
 
                                     <div class='page-title-right'>
                                         <ol class='breadcrumb m-0'>
-                                            <li class='breadcrumb-item'><a href='/usercp/login/index.php'>".$_SESSION['username']['site_settings_site_name']."</a></li>
+                                            <li class='breadcrumb-item'><a href='/usercp/login/index.php'>".$_SESSION['xucp_uname']['site_settings_site_name']."</a></li>
                                             <li class='breadcrumb-item active'>".SECURE_SYSTEM."</li>
                                         </ol>
                                     </div>
@@ -102,13 +96,9 @@ function site_secure_staff_check(): void
                                 <div class='card-body'>
 									".MSG_2."
                                 </div>
-                                <!-- end card body -->
                             </div>
-                            <!-- end card -->
                         </div>
-                        <!-- end col -->
-                    </div>
-                    <!-- end row -->";
+                    </div>";
 		site_footer();
 		die();		
 	}
@@ -119,7 +109,7 @@ function site_secure_staff_check(): void
  */
 function site_secure_staff_check_rank(): void
 {
-	if(intval($_SESSION['username']['secure_staff']) < "".UC_CLASS_PROJECT_MANAGEMENT."") {
+	if(intval($_SESSION['xucp_uname']['secure_staff']) < UC_CLASS_PROJECT_MANAGEMENT) {
 		site_header(SECURE_SYSTEM);
 		site_navi_logged();
 		site_content_logged();
@@ -131,7 +121,7 @@ function site_secure_staff_check_rank(): void
 
                                     <div class='page-title-right'>
                                         <ol class='breadcrumb m-0'>
-                                            <li class='breadcrumb-item'><a href='/usercp/login/index.php'>".$_SESSION['username']['site_settings_site_name']."</a></li>
+                                            <li class='breadcrumb-item'><a href='/usercp/login/index.php'>".$_SESSION['xucp_uname']['site_settings_site_name']."</a></li>
                                             <li class='breadcrumb-item active'>".SECURE_SYSTEM."</li>
                                         </ol>
                                     </div>
@@ -150,16 +140,11 @@ function site_secure_staff_check_rank(): void
                                 <div class='card-body'>
 									".MSG_26."
                                 </div>
-                                <!-- end card body -->
                             </div>
-                            <!-- end card -->
                         </div>
-                        <!-- end col -->
-                    </div>
-                    <!-- end row -->";
+                    </div>";
 		site_footer();
 		die();		
 	}
 }
-
 ?>

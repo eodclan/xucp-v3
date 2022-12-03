@@ -29,11 +29,11 @@ function site_footer(): void
                     <div class='container-fluid'>
                         <div class='row'>
                             <div class='col-sm-6'>
-                                &copy; ".$_SESSION['username']['site_settings_site_name'].". All rights reserved.
+                                &copy; ".$_SESSION['xucp_uname']['site_settings_site_name'].". All rights reserved.
                             </div>
                             <div class='col-sm-6'>
                                 <div class='text-sm-end d-none d-sm-block'>
-                                    xUCP Pro V3.0alpha-10
+                                    xUCP Pro V3.0alpha-11
                                 </div>
                             </div>
                         </div>

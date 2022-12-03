@@ -25,7 +25,7 @@ echo "
 
                                     <div class='page-title-right'>
                                         <ol class='breadcrumb m-0'>
-                                            <li class='breadcrumb-item'><a href='/usercp/login/index.php'>".$_SESSION['username']['site_settings_site_name']."</a></li>
+                                            <li class='breadcrumb-item'><a href='/usercp/login/index.php'>".$_SESSION['xucp_uname']['site_settings_site_name']."</a></li>
                                             <li class='breadcrumb-item active'>".LOGIN."</li>
                                         </ol>
                                     </div>
@@ -58,7 +58,7 @@ if('POST' == $_SERVER['REQUEST_METHOD'] && isset($_POST['xucp_login'])){
                 {
                     if(password_verify($password, $row["password"]))
                     {
-                        $_SESSION['username'] = [
+                        $_SESSION['xucp_uname'] = [
                             'secure_first' => $row["id"],
                             'secure_granted' => "granted",
                             'secure_staff' => $row["adminlevel"],
@@ -157,12 +157,8 @@ if('POST' == $_SERVER['REQUEST_METHOD'] && isset($_POST['xucp_login'])){
 										<p class='text-muted mb-0'>".NOTE3." <a href='/usercp/register/index.php?myregister=register' class='text-primary fw-semibold'> ".REGISTER." </a> </p>
 									</div>
                                 </div>
-                                <!-- end card body -->
                             </div>
-                            <!-- end card -->
                         </div>
-                        <!-- end col -->
-                    </div>
-                    <!-- end row -->";
+                    </div>";
 site_footer();	  
 ?>

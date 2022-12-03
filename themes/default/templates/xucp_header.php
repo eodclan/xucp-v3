@@ -35,7 +35,7 @@ function site_header(string $SITESUBTITLE = ""): void
 		<!-- #   All rights reserved.                              # -->
 		<!-- ####################################################### -->	
         <meta charset='utf-8' />
-        <title>".$_SESSION['username']['site_settings_site_name']." | ".$SITESUBTITLE."</title>
+        <title>".$_SESSION['xucp_uname']['site_settings_site_name']." | ".$SITESUBTITLE."</title>
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 		<meta name='generator' content='Powered by xUCP Pro Version V3.0 alpha' />
         <link rel='shortcut icon' href='/themes/default/assets/images/favicon.ico'>
@@ -54,7 +54,7 @@ function site_header(string $SITESUBTITLE = ""): void
 		header("Feature-Policy: vibrate 'self'; usermedia *; sync-xhr 'self'");
 echo "
     </head>
-    <body data-layout-mode='".$_SESSION['username']['site_settings_themes']."' data-sidebar='".$_SESSION['username']['site_settings_themes']."'>
+    <body data-layout-mode='".$_SESSION['xucp_uname']['site_settings_themes']."' data-sidebar='".$_SESSION['xucp_uname']['site_settings_themes']."'>
         <!-- Begin page -->
         <div id='layout-wrapper'>
             <header id='page-topbar'>
@@ -66,7 +66,7 @@ echo "
                                     <img src='/themes/default/assets/images/logo-bg.png' alt='' height='24'>
                                 </span>
                                 <span class='logo-lg'>
-                                    <img src='/themes/default/assets/images/logo-bg.png' alt='' height='24'> <span class='logo-txt'>".$_SESSION['username']['site_settings_site_name']."</span>
+                                    <img src='/themes/default/assets/images/logo-bg.png' alt='' height='24'> <span class='logo-txt'>".$_SESSION['xucp_uname']['site_settings_site_name']."</span>
                                 </span>
                             </a>
                             <a href='/usercp/dashboard/index.php' class='logo logo-light'>
@@ -74,7 +74,7 @@ echo "
                                     <img src='/themes/default/assets/images/logo-bg.png' alt='' height='24'>
                                 </span>
                                 <span class='logo-lg'>
-                                    <img src='/themes/default/assets/images/logo-bg.png' alt='' height='24'> <span class='logo-txt'>".$_SESSION['username']['site_settings_site_name']."</span>
+                                    <img src='/themes/default/assets/images/logo-bg.png' alt='' height='24'> <span class='logo-txt'>".$_SESSION['xucp_uname']['site_settings_site_name']."</span>
                                 </span>
                             </a>
                         </div>
@@ -123,7 +123,7 @@ function site_header_nologged(string $SITESUBTITLE = ""): void
 		<!-- #   All rights reserved.                              # -->
 		<!-- ####################################################### -->	
         <meta charset='utf-8' />
-        <title>".$_SESSION['username']['site_settings_site_name']." | ".$SITESUBTITLE."</title>
+        <title>".$_SESSION['xucp_uname']['site_settings_site_name']." | ".$SITESUBTITLE."</title>
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 		<meta name='generator' content='Powered by xUCP Pro Version V3.0 alpha' />
         <link rel='shortcut icon' href='/themes/default/assets/images/favicon.ico'>
@@ -140,7 +140,7 @@ function site_header_nologged(string $SITESUBTITLE = ""): void
 		header("Feature-Policy: vibrate 'self'; usermedia *; sync-xhr 'self'");
 echo "
     </head>
-    <body data-layout-mode='".$_SESSION['username']['site_settings_themes']."' data-sidebar='".$_SESSION['username']['site_settings_themes']."'>
+    <body data-layout-mode='".$_SESSION['xucp_uname']['site_settings_themes']."' data-sidebar='".$_SESSION['xucp_uname']['site_settings_themes']."'>
         <!-- Begin page -->
         <div id='layout-wrapper'>
             <header id='page-topbar'>
@@ -152,7 +152,7 @@ echo "
                                     <img src='/themes/default/assets/images/logo-bg.png' alt='' height='24'>
                                 </span>
                                 <span class='logo-lg'>
-                                    <img src='/themes/default/assets/images/logo-bg.png' alt='' height='24'> <span class='logo-txt'>".$_SESSION['username']['site_settings_site_name']."</span>
+                                    <img src='/themes/default/assets/images/logo-bg.png' alt='' height='24'> <span class='logo-txt'>".$_SESSION['xucp_uname']['site_settings_site_name']."</span>
                                 </span>
                             </a>
                             <a href='/index.php' class='logo logo-light'>
@@ -160,7 +160,7 @@ echo "
                                     <img src='/themes/default/assets/images/logo-bg.png' alt='' height='24'>
                                 </span>
                                 <span class='logo-lg'>
-                                    <img src='/themes/default/assets/images/logo-bg.png' alt='' height='24'> <span class='logo-txt'>".$_SESSION['username']['site_settings_site_name']."</span>
+                                    <img src='/themes/default/assets/images/logo-bg.png' alt='' height='24'> <span class='logo-txt'>".$_SESSION['xucp_uname']['site_settings_site_name']."</span>
                                 </span>
                             </a>
                         </div>
@@ -170,6 +170,5 @@ echo "
                     </div>
                 </div>
             </header>";
-	
 }
 ?>
