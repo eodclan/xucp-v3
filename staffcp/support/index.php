@@ -1,4 +1,4 @@
-<?php 
+<?php
 // ************************************************************************************//
 // * xUCP Free
 // ************************************************************************************//
@@ -14,16 +14,7 @@ include(dirname(__FILE__) . "/../../include/features.php");
 
 site_secure();
 secure_url();
-
 site_secure_staff_check_rank();
-
-$limit = 10;  
-if (isset($_GET["site"])) {
-	$site  = $_GET["site"]; 
-}else{ 
-	$site=1;
-};  
-$start_from = ($site-1) * $limit;
 
 if (isset($_GET["support"])) $support = trim(htmlentities($_GET["support"]));
 elseif (isset($_POST["support"])) $support = trim(htmlentities($_POST["support"]));
@@ -38,7 +29,6 @@ echo"
                             <div class='col-12'>
                                 <div class='page-title-box d-sm-flex align-items-center justify-content-between'>
                                     <h4 class='mb-sm-0 font-size-18'>".SUPPORT_HEADER_LIST."</h4>
-
                                     <div class='page-title-right'>
                                         <ol class='breadcrumb m-0'>
                                             <li class='breadcrumb-item'><a href='/staffcp/support/index.php'>".$_SESSION['xucp_uname']['site_settings_site_name']."</a></li>
@@ -108,11 +98,9 @@ echo"
 													</th>				  
 												</thead>
 												<tbody>";
-                                            $select_stmt = $db->prepare("SELECT * FROM xucp_support ORDER BY id ASC LIMIT ".$start_from.", ".$limit);
-                                            $select_stmt->execute();
-                                            $support=$select_stmt->fetch(PDO::FETCH_ASSOC);
-
-                                            if($select_stmt->rowCount() > 0){
+                                                $select_stmt = $db->prepare("SELECT * FROM xucp_support WHERE id LIKE ?");
+                                                $select_stmt->execute(array("%$query%"));
+                                                while($support = $select_stmt->fetch()) {
 													echo"					
 													<tr>
 														<td>
@@ -131,8 +119,8 @@ echo"
 															".htmlentities($support['posted'], ENT_QUOTES, 'UTF-8')."
 														</td>					
 													</tr>";
-											}
-										echo"									  
+											    }
+										        echo"									  
 												</tbody>
 											</table>
 										</div>		  
