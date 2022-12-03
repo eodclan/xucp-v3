@@ -19,7 +19,7 @@ site_header(DASHBOARD);
 site_navi_logged();
 site_content_logged();
 
-$select_stmt = $db->prepare("SELECT * FROM accounts WHERE `id` = ".$_SESSION['username']['secure_first']);
+$select_stmt = $db->prepare("SELECT * FROM accounts WHERE `id` = ".$_SESSION['xucp_uname']['secure_first']);
 $select_stmt->execute();
 $wl_status=$select_stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -34,7 +34,7 @@ if($select_stmt->rowCount() > 0){
 
                                     <div class='page-title-right'>
                                         <ol class='breadcrumb m-0'>
-                                            <li class='breadcrumb-item'><a href='/usercp/dashboard/index.php'>".$_SESSION['username']['site_settings_site_name']."</a></li>
+                                            <li class='breadcrumb-item'><a href='/usercp/dashboard/index.php'>".$_SESSION['xucp_uname']['site_settings_site_name']."</a></li>
                                             <li class='breadcrumb-item active'>".DASHBOARD."</li>
                                         </ol>
                                     </div>
@@ -51,7 +51,7 @@ if($select_stmt->rowCount() > 0){
 
                                     <div class='page-title-right'>
                                         <ol class='breadcrumb m-0'>
-                                            <li class='breadcrumb-item'><a href='/usercp/dashboard/index.php'>".$_SESSION['username']['site_settings_site_name']."</a></li>
+                                            <li class='breadcrumb-item'><a href='/usercp/dashboard/index.php'>".$_SESSION['xucp_uname']['site_settings_site_name']."</a></li>
                                             <li class='breadcrumb-item active'>".DASHBOARD."</li>
                                         </ol>
                                     </div>
@@ -60,7 +60,7 @@ if($select_stmt->rowCount() > 0){
                             </div>
                         </div>";
     }
-    if(intval($_SESSION['username']['secure_staff']) >= UC_CLASS_SUPPORTER) {
+    if(intval($_SESSION['xucp_uname']['secure_staff']) >= UC_CLASS_SUPPORTER) {
         $select_stmt = $db->prepare("SELECT * FROM accounts ORDER by id DESC LIMIT 1");
         $select_stmt->execute();
         $max_users_status=$select_stmt->fetch(PDO::FETCH_ASSOC);
@@ -126,7 +126,7 @@ $row=$select_stmt->fetch(PDO::FETCH_ASSOC);
 if($select_stmt->rowCount() > 0){
     $title_field = "title";
     $content_field = "content";
-    if(isset($_SESSION['username']['secure_lang']) && $_SESSION['username']['secure_lang'] == 'de'){
+    if(isset($_SESSION['xucp_uname']['secure_lang']) && $_SESSION['xucp_uname']['secure_lang'] == 'de'){
         $title_field = "title_de";
         $content_field = "content_de";
     }
