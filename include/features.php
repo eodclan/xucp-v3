@@ -47,7 +47,7 @@ if(isset($_POST['logout'])){
 
                                     <div class='page-title-right'>
                                         <ol class='breadcrumb m-0'>
-                                            <li class='breadcrumb-item'><a href='/index.php'>".$_SESSION['username']['site_settings_site_name']."</a></li>
+                                            <li class='breadcrumb-item'><a href='/index.php'>".$_SESSION['xucp_uname']['site_settings_site_name']."</a></li>
                                             <li class='breadcrumb-item active'>".LOGOUT."</li>
                                         </ol>
                                     </div>
@@ -75,7 +75,7 @@ if(isset($_POST['logout'])){
 // ************************************************************************************//
 // BB-Code-Editor System
 // ************************************************************************************//
-function textbbcode($text, $content = "")
+function textbbcode($text, $content = ""): void
 {
     $button = "/themes/default/assets/editor/";
 
@@ -89,7 +89,7 @@ function textbbcode($text, $content = "")
 // ************************************************************************************//
 // Format Comment System for BB-Code-Editor System
 // ************************************************************************************//
-function format_comment($text, $strip_html = true)
+function format_comment($text, $strip_html = true): array|string
 {
     $s = stripslashes($text); 
 
