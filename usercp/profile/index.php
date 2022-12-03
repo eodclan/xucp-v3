@@ -27,7 +27,7 @@ echo "
 
                                     <div class='page-title-right'>
                                         <ol class='breadcrumb m-0'>
-                                            <li class='breadcrumb-item'><a href='/usercp/profile/index.php'>".$_SESSION['username']['site_settings_site_name']."</a></li>
+                                            <li class='breadcrumb-item'><a href='/usercp/profile/index.php'>".$_SESSION['xucp_uname']['site_settings_site_name']."</a></li>
                                             <li class='breadcrumb-item active'>".USERPROFILECHANGE."</li>
                                         </ol>
                                     </div>
@@ -44,7 +44,7 @@ if(isset($_POST['xucp_submit'])){
         $email 	= filter_input(INPUT_POST, 'xucp_email', FILTER_SANITIZE_EMAIL);
         $language 	= filter_input(INPUT_POST, 'xucp_language', FILTER_SANITIZE_SPECIAL_CHARS);
         $password = filter_input(INPUT_POST, 'xucp_password', FILTER_DEFAULT);
-        $user_id = $_SESSION['username']['secure_first'];
+        $user_id = $_SESSION['xucp_uname']['secure_first'];
 
         if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
             $errorMsg[]=MSG_13;
@@ -97,13 +97,9 @@ if(isset($errorMsg))
                     <div class='card-body'>
                         ".$error."
                     </div>
-                    <!-- end card body -->
                 </div>
-                <!-- end card -->
             </div>
-            <!-- end col -->
-        </div>
-        <!-- end row -->";
+        </div>";
     }
 }
 if(isset($registerMsg))
@@ -118,13 +114,9 @@ if(isset($registerMsg))
                 <div class='card-body'>
                     ".$registerMsg."
                 </div>
-                <!-- end card body -->
             </div>
-            <!-- end card -->
         </div>
-        <!-- end col -->
-    </div>
-    <!-- end row -->";
+    </div>";
 }
 echo "
                         <div class='row'>
@@ -136,7 +128,7 @@ echo "
                                                 <div class='d-flex align-items-start mt-3 mt-sm-0'>
                                                     <div class='flex-shrink-0'>
                                                         <div class='avatar-xl me-3'>";
-                                                    $select_stmt = $db->prepare("SELECT * FROM accounts WHERE id = ".$_SESSION['username']['secure_first']);
+                                                    $select_stmt = $db->prepare("SELECT * FROM accounts WHERE id = ".$_SESSION['xucp_uname']['secure_first']);
                                                     $select_stmt->execute();
                                                     $avatar=$select_stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -149,7 +141,7 @@ echo "
                                                     </div>
                                                     <div class='flex-grow-1'>
                                                         <div>";
-                                                    $select_stmt = $db->prepare("SELECT * FROM accounts WHERE id = ".$_SESSION['username']['secure_first']);
+                                                    $select_stmt = $db->prepare("SELECT * FROM accounts WHERE id = ".$_SESSION['xucp_uname']['secure_first']);
                                                     $select_stmt->execute();
                                                     $user_sig=$select_stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -191,7 +183,7 @@ echo "
                                                             </div>
                                                             <div class='col-xl'>
                                                                 <div class='text-muted'>";
-                                                            $select_stmt = $db->prepare("SELECT * FROM accounts WHERE id = ".$_SESSION['username']['secure_first']);
+                                                            $select_stmt = $db->prepare("SELECT * FROM accounts WHERE id = ".$_SESSION['xucp_uname']['secure_first']);
                                                             $select_stmt->execute();
                                                             $u_sig=$select_stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -217,7 +209,7 @@ echo "
                                                 <div>
                                                     <div class='pb-3'>
                                                         <div class='text-muted'>";
-                                                        $select_stmt = $db->prepare("SELECT * FROM accounts WHERE id = ".$_SESSION['username']['secure_first']);
+                                                        $select_stmt = $db->prepare("SELECT * FROM accounts WHERE id = ".$_SESSION['xucp_uname']['secure_first']);
                                                         $select_stmt->execute();
                                                         $profile=$select_stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -282,7 +274,7 @@ echo "
                                         <h5 class='card-title mb-3'>".PROFILE_PORTFOLIO."</h5>
 
                                         <div class='list-group list-group-flush'>";
-                                        $select_stmt = $db->prepare("SELECT * FROM accounts WHERE id = ".$_SESSION['username']['secure_first']);
+                                        $select_stmt = $db->prepare("SELECT * FROM accounts WHERE id = ".$_SESSION['xucp_uname']['secure_first']);
                                         $select_stmt->execute();
                                         $portfolio=$select_stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -311,7 +303,7 @@ echo "
                                         <h5 class='card-title mb-3'>".PROFILE_PORTFOLIO_DISCORDTAG."</h5>
 
                                         <div class='list-group list-group-flush'>";
-                                        $select_stmt = $db->prepare("SELECT * FROM accounts WHERE id = ".$_SESSION['username']['secure_first']);
+                                        $select_stmt = $db->prepare("SELECT * FROM accounts WHERE id = ".$_SESSION['xucp_uname']['secure_first']);
                                         $select_stmt->execute();
                                         $dc_tag=$select_stmt->fetch(PDO::FETCH_ASSOC);
 

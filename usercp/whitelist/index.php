@@ -27,7 +27,7 @@ echo "
 
                                     <div class='page-title-right'>
                                         <ol class='breadcrumb m-0'>
-                                            <li class='breadcrumb-item'><a href='/usercp/whitelist/index.php?mywhitelist=addwl'>".$_SESSION['username']['site_settings_site_name']."</a></li>
+                                            <li class='breadcrumb-item'><a href='/usercp/whitelist/index.php?mywhitelist=addwl'>".$_SESSION['xucp_uname']['site_settings_site_name']."</a></li>
                                             <li class='breadcrumb-item active'>".MYWHITELIST_HEADER."</li>
                                         </ol>
                                     </div>
@@ -39,8 +39,8 @@ echo "
 if(isset($_REQUEST['xucp_myaddwl']))
 {
     $ucpname    = strip_tags($_REQUEST['xucp_ucpname']);
-    $charname     = strip_tags($_REQUEST['xucp_charname']);
-    $charstory     = strip_tags($_REQUEST['xucp_charstory']);
+    $charname   = strip_tags($_REQUEST['xucp_charname']);
+    $charstory  = strip_tags($_REQUEST['xucp_charstory']);
     $frage1     = strip_tags($_REQUEST['xucp_frage1']);
     $frage2     = strip_tags($_REQUEST['xucp_frage2']);
     $frage3     = strip_tags($_REQUEST['xucp_frage3']);
@@ -112,13 +112,10 @@ if(isset($errorMsg))
                                     <p class='card-title-desc'>".MYWHITELIST_STATUS_5."<br>".MYWHITELIST_STATUS_6."</p>
                                 </div>
                                 <div class='card-body'>	
-									".$error."".MYWHITELIST_STATUS_4."
+									".$error."
                                 </div>
-                                <!-- end card body -->
                             </div>
-                            <!-- end card -->
                         </div>
-                        <!-- end col -->
                     </div>";
     }
 }
@@ -134,11 +131,8 @@ if(isset($registerMsg))
                                 <div class='card-body'>	
 									".$registerMsg."
                                 </div>
-                                <!-- end card body -->
                             </div>
-                            <!-- end card -->
                         </div>
-                        <!-- end col -->
                     </div>";
 }
 
@@ -161,7 +155,7 @@ if($select_stmt->rowCount() > 0){
 											<div class='form-group'>
 												<label class='col-sm-12 col-form-label'>".MYWHITELIST_USERNAME."</label>
 												<div class='col-sm-12'>";
-                                            $select_stmt = $db->prepare("SELECT * FROM accounts WHERE `id` = ".$_SESSION['username']['secure_first']);
+                                            $select_stmt = $db->prepare("SELECT * FROM accounts WHERE `id` = ".$_SESSION['xucp_uname']['secure_first']);
                                             $select_stmt->execute();
                                             $wl_username=$select_stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -259,11 +253,8 @@ if($select_stmt->rowCount() > 0){
 										<input type='submit' name='xucp_myaddwl' value='".FRAGE_SEND."' class='btn btn-dark mr-2' />
 									</form>
                                 </div>
-                                <!-- end card body -->
                             </div>
-                            <!-- end card -->
                         </div>
-                        <!-- end col -->
                     </div>";
 }
 site_footer();	

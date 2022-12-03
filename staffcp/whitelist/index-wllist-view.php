@@ -33,7 +33,7 @@ if($select_stmt->rowCount() > 0){
 
                                     <div class='page-title-right'>
                                         <ol class='breadcrumb m-0'>
-                                            <li class='breadcrumb-item'><a href='/staffcp/whitelist/index-wllist.php'>".$_SESSION['username']['site_settings_site_name']."</a></li>
+                                            <li class='breadcrumb-item'><a href='/staffcp/whitelist/index-wllist.php'>".$_SESSION['xucp_uname']['site_settings_site_name']."</a></li>
                                             <li class='breadcrumb-item active'>".FRAGE_HEADER_2." ".FROM_WL." " .$row['ucpname']. "</li>
                                         </ol>
                                     </div>
@@ -45,7 +45,7 @@ if($select_stmt->rowCount() > 0){
 
               <div class='col-lg-12'>
                 <div class='card'>
-                  <div class='card-body'>
+					<div class='card-body'>
 						<form class='forms-sample' name='form' method='post' action='/staffcp/whitelist/index-wllist-view.php?id=".$id."'>
                             <input type='hidden' name='new' value='1' />
                             <div class='form-group'>
@@ -172,14 +172,7 @@ if($select_stmt->rowCount() > 0){
 						</div>							
 					</div>
 				</div>
-                                </div>
-                                <!-- end card body -->
-                            </div>
-                            <!-- end card -->
-                        </div>
-                        <!-- end col -->
-                    </div>
-                    <!-- end row -->";
+            </div>";
 }
 site_footer();
 ?>

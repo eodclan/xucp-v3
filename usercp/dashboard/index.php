@@ -69,9 +69,7 @@ if($select_stmt->rowCount() > 0){
             echo "
                         <div class='row'>
                             <div class='col-xl-6 col-md-6'>
-                                <!-- card -->
                                 <div class='card card-h-100'>
-                                    <!-- card body -->
                                     <div class='card-body'>
                                         <div class='row align-items-center'>
                                             <div class='col-6'>
@@ -84,9 +82,9 @@ if($select_stmt->rowCount() > 0){
 										<div class='progress' style='height: 3px'>
 											<div class='progress-bar bg-dash-color-1' role='progressbar' style='width: ".htmlentities($max_users_status['id'], ENT_QUOTES, 'UTF-8')."%' aria-valuenow='".htmlentities($max_users_status['id'], ENT_QUOTES, 'UTF-8')."' aria-valuemin='0' aria-valuemax='10000'></div>
 										</div>
-                                    </div><!-- end card body -->
-                                </div><!-- end card -->
-                            </div><!-- end col -->";
+                                    </div>
+                                </div>
+                            </div>";
         }
 
         $select_stmt = $db->prepare("SELECT id FROM xucp_support ORDER by id DESC LIMIT 1");
@@ -96,9 +94,7 @@ if($select_stmt->rowCount() > 0){
         if($select_stmt->rowCount() > 0){
             echo "
                             <div class='col-xl-6 col-md-6'>
-                                <!-- card -->
                                 <div class='card card-h-100'>
-                                    <!-- card body -->
                                     <div class='card-body'>
                                         <div class='row align-items-center'>
                                             <div class='col-6'>
@@ -111,9 +107,9 @@ if($select_stmt->rowCount() > 0){
 										<div class='progress' style='height: 3px'>
 											<div class='progress-bar bg-dash-color-1' role='progressbar' style='width: ".htmlentities($row['id'], ENT_QUOTES, 'UTF-8')."%' aria-valuenow='".htmlentities($row['id'], ENT_QUOTES, 'UTF-8')."' aria-valuemin='0' aria-valuemax='10000'></div>
 										</div>
-                                    </div><!-- end card body -->
-                                </div><!-- end card -->
-                            </div><!-- end col -->
+                                    </div>
+                                </div>
+                            </div>
                         </div>";
         }
     }
@@ -146,13 +142,9 @@ if($select_stmt->rowCount() > 0){
                                 <div class='card-body'>
 									".format_comment($short_content)."
                                 </div>
-                                <!-- end card body -->
                             </div>
-                            <!-- end card -->
                         </div>
-                        <!-- end col -->
-                    </div>
-                    <!-- end row -->";
+                    </div>";
 }
 site_footer();	
 ?>

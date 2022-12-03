@@ -26,7 +26,7 @@ echo "
 
                                     <div class='page-title-right'>
                                         <ol class='breadcrumb m-0'>
-                                            <li class='breadcrumb-item'><a href='/usercp/register/index.php?myregister=register'>".$_SESSION['username']['site_settings_site_name']."</a></li>
+                                            <li class='breadcrumb-item'><a href='/usercp/register/index.php?myregister=register'>".$_SESSION['xucp_uname']['site_settings_site_name']."</a></li>
                                             <li class='breadcrumb-item active'>".REGISTER."</li>
                                         </ol>
                                     </div>
@@ -108,13 +108,9 @@ if(isset($errorMsg))
                     <div class='card-body'>
                         ".$error."
                     </div>
-                    <!-- end card body -->
                 </div>
-                <!-- end card -->
             </div>
-            <!-- end col -->
-        </div>
-        <!-- end row -->";
+        </div>";
     }
 }
 if(isset($registerMsg))
@@ -129,13 +125,9 @@ if(isset($registerMsg))
                 <div class='card-body'>
                     ".$registerMsg."
                 </div>
-                <!-- end card body -->
             </div>
-            <!-- end card -->
         </div>
-        <!-- end col -->
-    </div>
-    <!-- end row -->";
+    </div>";
 }
 
 echo "
@@ -179,12 +171,8 @@ echo "
 										<p class='text-muted mb-0'>".NOTE4." <a href='/usercp/login/index.php' class='text-primary fw-semibold'> ".LOGIN." </a> </p>
 									</div>					
                                 </div>
-                                <!-- end card body -->
                             </div>
-                            <!-- end card -->
                         </div>
-                        <!-- end col -->
-                    </div>
-                    <!-- end row -->";
+                    </div>";
 site_footer();	 	
 ?>

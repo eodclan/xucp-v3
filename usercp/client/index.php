@@ -27,7 +27,7 @@ site_content_logged();
 
                                     <div class='page-title-right'>
                                         <ol class='breadcrumb m-0'>
-                                            <li class='breadcrumb-item'><a href='/usercp/client/index.php'>".$_SESSION['username']['site_settings_site_name']."</a></li>
+                                            <li class='breadcrumb-item'><a href='/usercp/client/index.php'>".$_SESSION['xucp_uname']['site_settings_site_name']."</a></li>
                                             <li class='breadcrumb-item active'>".GSERVER_INFO_HEAD."</li>
                                         </ol>
                                     </div>
@@ -48,26 +48,26 @@ site_content_logged();
 											<label class='form-label'>".SITECONFIG_GSERVERNAME."</label>
 										</div>
 										<div class='col-lg-6'>
-											<label class='form-label'>".$_SESSION['username']['site_settings_gservername']."</label>
+											<label class='form-label'>".$_SESSION['xucp_uname']['site_settings_gservername']."</label>
 										</div>
 										<div class='col-lg-6'>
 											<label class='form-label'>".SITECONFIG_GSERVERIP."</label>
 										</div>
 										<div class='col-lg-6'>
-											<label class='form-label'>".$_SESSION['username']['site_settings_gserverip']."</label>
+											<label class='form-label'>".$_SESSION['xucp_uname']['site_settings_gserverip']."</label>
 										</div>
 										<div class='col-lg-6'>
 											<label class='form-label'>".SITECONFIG_GSERVERPORT."</label>
 										</div>
 										<div class='col-lg-6'>
-											<label class='form-label'>".$_SESSION['username']['site_settings_gserverport']."</label>
+											<label class='form-label'>".$_SESSION['xucp_uname']['site_settings_gserverport']."</label>
 										</div>
 										<div class='col-lg-6'>
 											<label class='form-label'>".SITECONFIG_GSERVER_STATUS."</label>
 										</div>
 										<div class='col-lg-6'>
 											<label class='form-label'>";
-											if (false === fsockopen($_SESSION['username']['site_settings_gserverip'], $_SESSION['username']['site_settings_gserverport'], $errno, $errstr, 3600)) {
+											if (false === fsockopen($_SESSION['xucp_uname']['site_settings_gserverip'], $_SESSION['xucp_uname']['site_settings_gserverport'], $errno, $errstr, 3600)) {
 												echo "
 													<span style='color: #F00000; '><b>".UPTIME_DOWN."</b></span>";
 											}
@@ -89,7 +89,7 @@ site_content_logged();
 												</a>						
 											</label>
 										</div>";
-									if(intval($_SESSION['username']['site_settings_dl_section_ragemp']) >= 1) {
+									if(intval($_SESSION['xucp_uname']['site_settings_dl_section_ragemp']) >= 1) {
 									echo"
 										<div class='col-lg-6'>
 											<label class='form-label'>Client</label>
@@ -102,7 +102,7 @@ site_content_logged();
 											</label>
 										</div>";
 									}
-									if(intval($_SESSION['username']['site_settings_dl_section_altv']) >= 1) {
+									if(intval($_SESSION['xucp_uname']['site_settings_dl_section_altv']) >= 1) {
 									echo"
 										<div class='col-lg-6'>
 											<label class='form-label'>Client</label>
@@ -115,7 +115,7 @@ site_content_logged();
 											</label>					
 										</div>";
 									}
-									if(intval($_SESSION['username']['site_settings_dl_section_fivem']) >= 1) {
+									if(intval($_SESSION['xucp_uname']['site_settings_dl_section_fivem']) >= 1) {
 									echo"
 										<div class='col-lg-6'>
 											<label class='form-label'>Client</label>
@@ -128,7 +128,7 @@ site_content_logged();
 											</label>
 										</div>";
 									}
-									if(intval($_SESSION['username']['site_settings_dl_section_redm']) >= 1) {
+									if(intval($_SESSION['xucp_uname']['site_settings_dl_section_redm']) >= 1) {
 									echo"
 										<div class='col-lg-6'>
 											<label class='form-label'>Client</label>
@@ -144,12 +144,8 @@ site_content_logged();
 									echo "					
 									</div>
                                 </div>
-                                <!-- end card body -->
                             </div>
-                            <!-- end card -->
                         </div>
-                        <!-- end col -->
-                    </div>
-                    <!-- end row -->";	
+                    </div>";	
 site_footer();	
 ?>		

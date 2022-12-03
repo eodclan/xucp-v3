@@ -32,7 +32,7 @@ if($select_stmt->rowCount() > 0){
 
                                     <div class='page-title-right'>
                                         <ol class='breadcrumb m-0'>
-                                            <li class='breadcrumb-item'><a href='/usercp/keyboard/index.php'>".$_SESSION['username']['site_settings_site_name']."</a></li>
+                                            <li class='breadcrumb-item'><a href='/usercp/keyboard/index.php'>".$_SESSION['xucp_uname']['site_settings_site_name']."</a></li>
                                             <li class='breadcrumb-item active'>".KEY_HEADER_2."</li>
                                         </ol>
                                     </div>
@@ -41,13 +41,13 @@ if($select_stmt->rowCount() > 0){
                             </div>
                         </div>
 
-                    <div class='row'>
-              <div class='col-lg-12'>
+		<div class='row'>
+			<div class='col-lg-12'>
                 <div class='card'>
-                  <div class='card-body'>
-					".KEY_HEADER_2."
-				  </div>
-                  <div class='card-body'>
+					<div class='card-body'>
+						".KEY_HEADER_2."
+					</div>
+					<div class='card-body'>
 						<div class='table-responsive'>
 							<table class='table'>
 								<thead class=' text-primary'>
@@ -217,8 +217,9 @@ if($select_stmt->rowCount() > 0){
 						</div>";
 }
 echo "
+					</div>
+				</div>
 			</div>
-		  </div>
-		</section>";	  	
+		</div>";	  	
 site_footer();	
 ?>
