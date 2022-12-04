@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 3.0 Beta 2
+// * Version: 3.0 Beta 3
 // *
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -33,7 +33,7 @@ function site_footer(): void
                             </div>
                             <div class='col-sm-6'>
                                 <div class='text-sm-end d-none d-sm-block'>
-                                    xUCP Pro V3.0beta-2
+                                    xUCP Pro V3.0beta-3
                                 </div>
                             </div>
                         </div>

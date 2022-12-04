@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 3.0 Beta 2
+// * Version: 3.0 Beta 3
 // *
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -333,6 +333,8 @@ const STAFF_USERCONTROLOPTION = "Settings";
 const STAFF_USERCONTROLSAVE = "Save";
 const STAFF_USERCONTROLDELETE = "Delete";
 const STAFF_USERCONTROL_WL_STATUS = "Select the whitelist status.";
+const STAFF_CHANGE_USER = "Edit";
+const STAFF_BANNED_USER = "Banned";
 
 // ************************************************************************************//
 // * English Language Section - Server Status 

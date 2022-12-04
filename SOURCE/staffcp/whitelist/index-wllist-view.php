@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 3.0 Beta 2
+// * Version: 3.0 Beta 3
 // *
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -20,7 +20,7 @@ site_header(FRAGE_HEADER_2);
 site_navi_logged();
 site_content_logged();
 
-$id = $_GET['id'];
+$id = $_REQUEST['id'];
 $select_stmt = $db->prepare(query: "SELECT * FROM xucp_whitelist WHERE id = ".$id);
 $select_stmt->execute();
 $row=$select_stmt->fetch(PDO::FETCH_ASSOC);

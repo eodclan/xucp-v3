@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 3.0 Beta 2
+// * Version: 3.0 Beta 3
 // *
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -64,32 +64,40 @@ echo "
 										</th>
 										<th>
 											".PROFILE_PORTFOLIO_DISCORDTAG."
-										</th>										
+										</th>	
+										<th>
+											".STAFF_USERCONTROLOPTION."
+										</th>																			
 									</thead>
 									<tbody>";
                                 $select_stmt = $db->prepare(query: "SELECT * FROM accounts WHERE id LIKE ?");
                                 $select_stmt->execute(array("%$query%"));
-                                while($userchange_udb = $select_stmt->fetch()) {
+                                while($row = $select_stmt->fetch()) {
 									echo "
 										<tr>
 											<td>
-												" . $userchange_udb["id"]. "
+												" . $row["id"]. "
 											</td>
 											<td>
-												" . $userchange_udb["username"]. "
+												" . $row["username"]. "
 											</td>						
 											<td>
-												" . $userchange_udb["email"]. "
+												" . $row["email"]. "
 											</td>
 											<td>
-												" . $userchange_udb["whitelisted"]. "
+												" . $row["whitelisted"]. "
 											</td>
 											<td>
-												" . $userchange_udb["userhp"]. "
+												" . $row["userhp"]. "
 											</td>
 											<td>
-												" . $userchange_udb["userdiscordtag"]. "
-											</td>											
+												" . $row["userdiscordtag"]. "
+											</td>
+                                            <td>
+                                                <a href='/staffcp/users/index-change-view.php?id=".$row['id']."' class='btn btn-primary w-100 waves-effect waves-light'>
+                                                    <i class='dripicons-checkmark'></i>&nbsp;".STAFF_CHANGE_USER."
+                                                </a>
+                                            </td>											
 										</tr>";
 								}					
 								echo "					  

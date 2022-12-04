@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 3.0 Beta 2
+// * Version: 3.0 Beta 3
 // *
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -82,7 +82,6 @@ function site_navi_logged(): void
 									<span data-key='t-contacts'>Supporter</span>
 								</a>
 								<ul class='sub-menu' aria-expanded='false'>
-									<li><a href='/staffcp/users/index-change.php' data-key='t-user-grid'>".STAFF_USERCAHNEGED."</a></li>
 									<li><a href='/staffcp/users/index-control.php' data-key='t-user-list'>".STAFF_USERCONTROL."</a></li>
 									<li><a href='/staffcp/whitelist/index-wlquestion.php' data-key='t-profile'>".WHITELIST_HEADER."</a></li>
 									<li><a href='/staffcp/whitelist/index-wllist.php' data-key='t-profile'>".FRAGE_HEADER_2."</a></li>

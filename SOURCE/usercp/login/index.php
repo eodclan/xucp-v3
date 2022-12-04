@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 3.0 Beta 2
+// * Version: 3.0 Beta 3
 // * 
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -154,7 +154,7 @@ if('POST' == $_SERVER['REQUEST_METHOD'] && isset($_POST['xucp_login'])){
 										</div>
 									</form>
 									<div class='mt-5 text-center'>
-										<p class='text-muted mb-0'>".NOTE3." <a href='/usercp/register/index.php?myregister=register' class='text-primary fw-semibold'> ".REGISTER." </a> </p>
+										<p class='text-muted mb-0'>".NOTE3." <a href='/usercp/register/index.php' class='text-primary fw-semibold'> ".REGISTER." </a> </p>
 									</div>
                                 </div>
                             </div>
