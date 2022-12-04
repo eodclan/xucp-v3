@@ -17,20 +17,19 @@ Requirements for xUCP V3 Free:
 
 Features of the xUCP V3 Free:
 
-  1. CSRF Login & CSRF Register System
+  1. Login & Register System
   2. Staff Tools ( User Changer, Playerlist, News Creator, Rules Manager, Whitelist Manager, Keyboard Manager )
   3. Language System ( English & German )
   4. Support system
   5. Edit profile
-  6. My character (Only Pro Version)
-  7. Site Settings
-  8. Clients & Servers
-  9. Server Status System (Only Pro Version)
- 10. BB-Code-Editor System
- 11. Game Server Status System (Only Pro Version)
- 12. Upgrade Notice System (Only Free Version)
- 13. Class Admin Settings System
- 14. Mass E-Mail System
+  6. Site Settings
+  7. Clients & Servers
+  8. Server Status System
+  9. BB-Code-Editor System
+ 10. Game Server Status System
+ 11. Upgrade Notice System
+ 12. Class Admin Settings System
+ 13. Mass E-Mail System
 
 
 best regards
