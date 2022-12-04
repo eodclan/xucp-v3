@@ -4,8 +4,8 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 3.0 Beta 2
-// * 
+// * Version: 3.0 alpha
+// *
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
 // * License Typ: GNU GPLv3
@@ -35,13 +35,11 @@ echo"
                                 </div>
                             </div>
                         </div>";
-
-if(isset($_REQUEST['posted_sup']))
+if(isset($_REQUEST['xucp_submit']))
 {
-    $username 	= strip_tags($_REQUEST['xcp_username']);
-    $msg 		= filter_input(INPUT_POST, 'xcp_msg', FILTER_DEFAULT);
-    $bug 		= strip_tags($_REQUEST['xcp_bug']);
-    $posted 	= date('Y-m-d H:i:s');
+    $username = strip_tags($_REQUEST['xucp_username']);
+    $msg 	= strip_tags($_REQUEST['xucp_msg']);
+    $bug 	= strip_tags($_REQUEST['xucp_bug']);
 
     if(empty($username)){
         $errorMsg[]=MSG_10;
@@ -58,15 +56,14 @@ if(isset($_REQUEST['posted_sup']))
         {
             if(!isset($errorMsg))
             {
-                $insert_stmt=$db->prepare("INSERT INTO xucp_support (username, msg, bug, posted) VALUES
-																(:xucp_username,:xucp_msg,:xucp_bug,:xucp_posted)");
+                $insert_stmt=$db->prepare("INSERT INTO `xucp_support` (username,msg,bug) VALUES
+																(:xucp_username,:xucp_msg,:xucp_bug)");
 
                 if($insert_stmt->execute(array(	':xucp_username'	=>$username,
-                    ':xucp_msg'=>$msg,
-                    ':xucp_bug'=>$bug,
-                    ':xucp_posted'=>$posted))){
+                    ':xucp_msg'	=>$msg,
+                    ':xucp_bug'	=>$bug))){
 
-                    $registerMsg=SUPPORTADDDONE;
+                    $doneMsg=SUPPORTADDDONE;
                 }
             }
         }
@@ -81,7 +78,7 @@ if(isset($errorMsg))
 {
     foreach($errorMsg as $error)
     {
-			echo"
+        echo"
                         <div class='row'>
 							<div class='col-xl-12'>
 								<div class='card'>
@@ -96,9 +93,9 @@ if(isset($errorMsg))
 						</div>";
     }
 }
-if(isset($registerMsg))
+if(isset($doneMsg))
 {
-			echo"
+    echo"
                         <div class='row'>
 							<div class='col-xl-12'>
 								<div class='card'>
@@ -106,15 +103,15 @@ if(isset($registerMsg))
 										<h4 class='card-title'>".USERSUPPORT."</h4>
 									</div>
 									<div class='card-body'>
-										".$registerMsg."
+										".$doneMsg."
 									</div>
 								</div>
 							</div>
 						</div>";
 }
-$select_stmt = $db->prepare("SELECT * FROM accounts WHERE id = ".$_SESSION['username']['secure_first']);
+$select_stmt = $db->prepare("SELECT * FROM accounts  WHERE id = ".$_SESSION['xucp_uname']['secure_first']);
 $select_stmt->execute();
-$row=$select_stmt->fetch(PDO::FETCH_ASSOC);
+$support=$select_stmt->fetch(PDO::FETCH_ASSOC);
 if($select_stmt->rowCount() > 0){
     echo"
                         <div class='row'>
@@ -133,7 +130,7 @@ if($select_stmt->rowCount() > 0){
 														<small class='text-muted'>".SUPPORTUSERINFO1."</small>
 													</h6>
 													<div class='input-group'>
-														<input type='text' name='xcp_username' size='50' maxlength='60' class='form-control' value='".htmlentities($row['username'], ENT_QUOTES, 'UTF-8')."' required>
+														<input type='text' name='xucp_username' size='50' maxlength='60' class='form-control' value='".htmlentities($support['username'], ENT_QUOTES, 'UTF-8')."' required>
 													</div>	
 												</td>
 											</tr>
@@ -144,7 +141,7 @@ if($select_stmt->rowCount() > 0){
 														<small class='text-muted'>".SUPPORTUSERINFO2."</small>
 													</h6>
 													<div class='input-group'>
-														<input type='text' name='xcp_bug' size='50' maxlength='60' class='form-control' required>
+														<input type='text' name='xucp_bug' size='50' maxlength='60' class='form-control' required>
 													</div>	
 												</td>
 											</tr>
@@ -155,15 +152,18 @@ if($select_stmt->rowCount() > 0){
 														<small class='text-muted'>".SUPPORTUSERINFO3."</small>
 													</h6>
 													<div class='input-group'>";
-                                                        textbbcode("xcp_msg", htmlspecialchars(stripslashes($_POST["xcp_msg"])));
-                                                        echo"
+														textbbcode('xucp_msg', htmlspecialchars(stripslashes($support['msg'])));
+												echo"
 													</div>	
 												</td>						
 											</tr>
 											<br />
 											<tr>					  
 												<td>						
-													<input type='submit'  name='posted_sup' class='btn btn-secondary btn-sm waves-effect waves-light'>
+													<button type='submit' name='xucp_submit' class='btn btn-secondary btn-sm waves-effect waves-light'>
+														".SUPPORTSAVE."
+													</button>
+													</submit>
 												</td>							
 											</tr>				  						
 										</form>
@@ -172,6 +172,5 @@ if($select_stmt->rowCount() > 0){
 							</div>
 						</div>";
 }
-
 site_footer();
 ?>
