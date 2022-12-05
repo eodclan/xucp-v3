@@ -6,6 +6,7 @@ xUCP V3 Free (Open Source) Readme
 (C) 2022 DerStr1k3r.de
 
 https://derstr1k3r.de
+
 https://discord.gg/xg5mnYUWch
 
 ## What's Changed
