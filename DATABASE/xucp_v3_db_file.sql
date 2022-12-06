@@ -169,7 +169,7 @@ CREATE TABLE `xucp_support` (
   `username` varchar(16) NOT NULL,
   `msg` varchar(256) NOT NULL,
   `bug` varchar(30) NOT NULL,
-  `posted` datetime NOT NULL
+  `posted` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
