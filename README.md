@@ -6,16 +6,25 @@ xUCP V3 Free (Open Source) Readme
 (C) 2022 DerStr1k3r.de
 
 https://derstr1k3r.de
+
 https://discord.gg/xg5mnYUWch
 
-Requirements for xUCP V3 Free:
+## What's Changed
+* Beta by @eodclan in https://github.com/eodclan/xucp-v3/pull/1
+
+## New Contributors
+* @eodclan made their first contribution in https://github.com/eodclan/xucp-v3/pull/1
+
+**Full Changelog**: https://github.com/eodclan/xucp-v3/commits/3.0-final
+
+## Requirements for xUCP V3 Free:
 
   1. MySQL servers
   2. Web server (XAMPP is not supported!)
   3. PHP 8.1 or newer
   4. PHP-PDO 8.1
 
-Features of the xUCP V3 Free:
+## Features of the xUCP V3 Free:
 
   1. Login & Register System
   2. Staff Tools ( User Changer, Playerlist, News Creator, Rules Manager, Whitelist Manager, Keyboard Manager )
