@@ -30,7 +30,7 @@ CREATE TABLE `accounts` (
   `userava` varchar(256) DEFAULT '/themes/default/assets/images/logo-bg.png',
   `usersig` varchar(256) DEFAULT 'No signature available!',
   `userhp` varchar(64) DEFAULT NULL,
-  `userdiscordtag` varchar(32) NOT NULL
+  `userdiscordtag` varchar(32) DEFAULT 'no dctag'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ROW_FORMAT=DYNAMIC;
 
 --
