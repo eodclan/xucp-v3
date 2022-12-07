@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 3.0 Final
+// * Version: 3.0.1
 // *
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -25,7 +25,6 @@ function site_navi_logged(): void
             <div class='vertical-menu'>
                 <div data-simplebar class='h-100'>
                     <div id='sidebar-menu'>
-                        <!-- Left Menu Start -->
                         <ul class='metismenu list-unstyled' id='side-menu'>
                             <li class='menu-title' data-key='t-menu'>".$_SESSION['xucp_uname']['site_settings_site_name']."</li>
                             <li>
@@ -137,7 +136,6 @@ function site_navi_nologged(): void
             <div class='vertical-menu'>
                 <div data-simplebar class='h-100'>
                     <div id='sidebar-menu'>
-                        <!-- Left Menu Start -->
                         <ul class='metismenu list-unstyled' id='side-menu'>
                             <li class='menu-title' data-key='t-menu'>".$_SESSION['xucp_uname']['site_settings_site_name']."</li>
                             <li>

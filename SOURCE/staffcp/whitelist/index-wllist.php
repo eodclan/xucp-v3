@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 3.0 Final
+// * Version: 3.0.1
 // *
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -49,9 +49,9 @@ echo "
 											<thead>
 												<tr>
 													<th>ID</th>
-													<th>Username</th>
-													<th>Charakter Name</th>
-													<th>Option</th>
+													<th>".MYWHITELIST_USERNAME."</th>
+													<th>".MYWHITELIST_CHARNAME."</th>
+													<th>".STAFF_USERCONTROLOPTION."</th>
 												</tr>
 											</thead>
 											<tbody>";

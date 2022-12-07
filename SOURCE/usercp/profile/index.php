@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 3.0 Final
+// * Version: 3.0.1
 // * 
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -24,7 +24,6 @@ echo "
                             <div class='col-12'>
                                 <div class='page-title-box d-sm-flex align-items-center justify-content-between'>
                                     <h4 class='mb-sm-0 font-size-18'>".USERPROFILECHANGE."</h4>
-
                                     <div class='page-title-right'>
                                         <ol class='breadcrumb m-0'>
                                             <li class='breadcrumb-item'><a href='/usercp/profile/index.php'>".$_SESSION['xucp_uname']['site_settings_site_name']."</a></li>
