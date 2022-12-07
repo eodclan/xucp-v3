@@ -33,7 +33,7 @@ function site_footer(): void
                             </div>
                             <div class='col-sm-6'>
                                 <div class='text-sm-end d-none d-sm-block'>
-                                    xUCP Pro V3.0 Final
+                                    xUCP Free V3.0 Final
                                 </div>
                             </div>
                         </div>

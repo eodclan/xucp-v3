@@ -26,7 +26,7 @@ echo "
 
                                     <div class='page-title-right'>
                                         <ol class='breadcrumb m-0'>
-                                            <li class='breadcrumb-item'><a href='/usercp/register/index.php?myregister=register'>".$_SESSION['xucp_uname']['site_settings_site_name']."</a></li>
+                                            <li class='breadcrumb-item'><a href='/usercp/register/index.php'>".$_SESSION['xucp_uname']['site_settings_site_name']."</a></li>
                                             <li class='breadcrumb-item active'>".REGISTER."</li>
                                         </ol>
                                     </div>
