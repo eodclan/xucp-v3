@@ -15,7 +15,7 @@ https://discord.gg/xg5mnYUWch
 ## New Contributors
 * @eodclan made their first contribution in https://github.com/eodclan/xucp-v3/pull/1
 
-**Full Changelog**: https://github.com/eodclan/xucp-v3/commits/3.0-final
+**Full Changelog**: https://github.com/eodclan/xucp-v3/compare/3.0-final...3.0.1
 
 ## Requirements for xUCP V3 Free:
 
