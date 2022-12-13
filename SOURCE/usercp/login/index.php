@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 3.0.1
+// * Version: 3.0.2
 // * 
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -47,8 +47,8 @@ if('POST' == $_SERVER['REQUEST_METHOD'] && isset($_POST['xucp_login'])){
     {
         try
         {
-            $select_stmt=$db->prepare("SELECT * FROM accounts WHERE username=:username");
-            $select_stmt->execute(array(':username'=>$username));
+            $select_stmt=$db->prepare("SELECT * FROM accounts WHERE username=:xucp_username");
+            $select_stmt->execute(array(':xucp_username'=>$username));
             $row=$select_stmt->fetch(PDO::FETCH_ASSOC);
 
             if($select_stmt->rowCount() > 0)
@@ -159,4 +159,4 @@ if('POST' == $_SERVER['REQUEST_METHOD'] && isset($_POST['xucp_login'])){
                             </div>
                         </div>
                     </div>";
-site_footer();	  
+site_footer();

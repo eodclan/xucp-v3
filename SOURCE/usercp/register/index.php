@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 3.0.1
+// * Version: 3.0.2
 // * 
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -60,9 +60,9 @@ if(isset($_REQUEST['xucp_signup']))
         try
         {
             $select_stmt=$db->prepare("SELECT username, email FROM accounts 
-										WHERE username=:uname OR email=:uemail");
+										WHERE username=:xucp_username OR email=:xucp_email");
 
-            $select_stmt->execute(array(':uname'=>$username, ':uemail'=>$email));
+            $select_stmt->execute(array(':xucp_username'=>$username, ':xucp_email'=>$email));
             $row=$select_stmt->fetch(PDO::FETCH_ASSOC);
 
             if($row["username"]==$username){
@@ -76,11 +76,11 @@ if(isset($_REQUEST['xucp_signup']))
                 $new_password = password_hash($password, PASSWORD_BCRYPT);
 
                 $insert_stmt=$db->prepare("INSERT INTO accounts (username,email,password) VALUES
-																(:uname,:uemail,:upassword)");
+																(:xucp_username,:xucp_email,:xucp_password)");
 
-                if($insert_stmt->execute(array(	':uname'	=>$username,
-                    ':uemail'	=>$email,
-                    ':upassword'=>$new_password))){
+                if($insert_stmt->execute(array(	':xucp_username'	=>$username,
+                    ':xucp_email'	=>$email,
+                    ':xucp_password'=>$new_password))){
 
                     $registerMsg=MSG_9;
                 }

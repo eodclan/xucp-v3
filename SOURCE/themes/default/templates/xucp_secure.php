@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 3.0.1
+// * Version: 3.0.2
 // *
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -36,7 +36,6 @@ function site_secure(): void
                                             <li class='breadcrumb-item active'>".SECURE_SYSTEM."</li>
                                         </ol>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -79,7 +78,6 @@ function site_secure_staff_check(): void
                                             <li class='breadcrumb-item active'>".SECURE_SYSTEM."</li>
                                         </ol>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -122,7 +120,6 @@ function site_secure_staff_check_rank(): void
                                             <li class='breadcrumb-item active'>".SECURE_SYSTEM."</li>
                                         </ol>
                                     </div>
-
                                 </div>
                             </div>
                         </div>

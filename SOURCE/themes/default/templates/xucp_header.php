@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 3.0.1
+// * Version: 3.0.2
 // *
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -30,14 +30,14 @@ function site_header(string $SITESUBTITLE = ""): void
 <html lang='en'>
     <head>
 		<!-- ####################################################### -->
-		<!-- #   Powered by xUCP Free V3.0.1                       # -->
+		<!-- #   Powered by xUCP Free V3.0.2                       # -->
 		<!-- #   Copyright (c) 2022 DerStr1k3r.                    # -->
 		<!-- #   All rights reserved.                              # -->
 		<!-- ####################################################### -->	
         <meta charset='utf-8' />
         <title>".$_SESSION['xucp_uname']['site_settings_site_name']." | ".$SITESUBTITLE."</title>
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-		<meta name='generator' content='Powered by xUCP Free V3.0 Beta 2' />
+		<meta name='generator' content='Powered by xUCP Free V3.0.2' />
         <link rel='shortcut icon' href='/themes/default/assets/images/favicon.ico'>
         <link href='/themes/default/assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css' rel='stylesheet' type='text/css' />
         <link rel='stylesheet' href='/themes/default/assets/css/preloader.min.css' type='text/css' />
@@ -118,14 +118,14 @@ function site_header_nologged(string $SITESUBTITLE = ""): void
 <html lang='en'>
     <head>
 		<!-- ####################################################### -->
-		<!-- #   Powered by xUCP Free V3.0.1                       # -->
+		<!-- #   Powered by xUCP Free V3.0.2                       # -->
 		<!-- #   Copyright (c) 2022 DerStr1k3r.                    # -->
 		<!-- #   All rights reserved.                              # -->
 		<!-- ####################################################### -->	
         <meta charset='utf-8' />
         <title>".$_SESSION['xucp_uname']['site_settings_site_name']." | ".$SITESUBTITLE."</title>
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-		<meta name='generator' content='Powered by xUCP Free V3.0 Beta 2' />
+		<meta name='generator' content='Powered by xUCP Free V3.0.2' />
         <link rel='shortcut icon' href='/themes/default/assets/images/favicon.ico'>
         <link href='/themes/default/assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css' rel='stylesheet' type='text/css' />
         <link rel='stylesheet' href='/themes/default/assets/css/preloader.min.css' type='text/css' />
@@ -141,7 +141,6 @@ function site_header_nologged(string $SITESUBTITLE = ""): void
 echo "
     </head>
     <body data-layout-mode='".$_SESSION['xucp_uname']['site_settings_themes']."' data-sidebar='".$_SESSION['xucp_uname']['site_settings_themes']."'>
-        <!-- Begin page -->
         <div id='layout-wrapper'>
             <header id='page-topbar'>
                 <div class='navbar-header'>
