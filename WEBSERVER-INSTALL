@@ -1,0 +1,17 @@
+# xUCP V3 Free - Nginx configs
+ 
+xUCP V3 Free (Open Source) Readme
+
+(C) 2022 DerStr1k3r.de
+
+https://derstr1k3r.de
+
+https://discord.gg/xg5mnYUWch
+
+
+## Nginx Setup for xUCP V3 Free:
+
+  1. delete all .htaccess files
+  2. now go to the folder: WEBSERVER/nginx/configs/
+  3. now add the content of the htaccess_config file to your nginx web server installation.
+  4. have fun
