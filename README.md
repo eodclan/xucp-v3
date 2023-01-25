@@ -1,7 +1,7 @@
-# xUCP V3 Free
+# xUCP Free V3
  In this xUser Control Panel, it is a completely new development. PDO Version is for all GTA Roleplay Projects.
  
-xUCP V3 Free (Open Source) Readme
+xUCP Free V3 (Open Source) Readme
 
 (C) 2022 DerStr1k3r.de
 
@@ -17,14 +17,14 @@ https://discord.gg/xg5mnYUWch
 
 **Full Changelog**: https://github.com/eodclan/xucp-v3/compare/3.0.1...3.0.2
 
-## Requirements for xUCP V3 Free:
+## Requirements for xUCP Free V3:
 
   1. MySQL servers
   2. Web server (XAMPP is not supported!)
   3. PHP 8.1 or newer
   4. PHP-PDO 8.1
 
-## Features of the xUCP V3 Free:
+## Features of the xUCP Free V3:
 
   1. Login & Register System
   2. Staff Tools ( User Changer, Playerlist, News Creator, Rules Manager, Whitelist Manager, Keyboard Manager )
